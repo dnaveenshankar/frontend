@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Demo</title>
+</head>
+
+<body>
+    <form>
+        <h3>Registration Form</h3>
+        <div>
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname" required pattern="[A-Za-z0-9]{5,10}">
+        </div>
+
+        <div>
+            <label>Last Name</label>
+            <input type="text" name="lname" id="lname">
+        </div>
+
+        <div>
+            <label>Gender</label>
+            <input type="radio" name="gender" id="gender" value="Male" />Male
+            <input type="radio" name="gender" id="gender" value="Female" />Female
+        </div>
+
+        <div>
+            <label>DOB</label>
+            <input type="date" name="dob" id="dob" />
+        </div>
+
+        <div>
+            <label>Email</label>
+            <input type="email" name="email" id="email" />
+        </div>
+
+        <div>
+            <label>Country</label>
+            <select name="Country" id="Country">
+                <option value="#">--Select--</option>
+                <option value="India">India</option>
+                <option value="China">China</option>
+                <option value="Canada">Canada</option>
+                <option value="USA">USA</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Skills</label>
+            <input type="checkbox" name="Skills" value="Java">Java
+            <input type="checkbox" name="Skills" value="C">C
+            <input type="checkbox" name="Skills" value="Python">Python
+            <input type="checkbox" name="Skills" value="SQL">SQL
+            <input type="checkbox" name="Skills" value="React">React
+        </div>
+
+        <div>
+            <label>About yourself</label>
+            <textarea name="Aboutme" rows="5" cols="50">
+                Your Input here!
+            </textarea>
+        </div>
+
+        <input type="submit" value="Register" />
+        <input type="reset" value="reset" />
+    </form>
+</body>
+
+</html>

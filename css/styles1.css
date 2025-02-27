@@ -1,0 +1,12 @@
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    color: blueviolet;
+    font-size: 40px;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: aqua;
+}

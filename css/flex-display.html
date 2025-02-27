@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex, Display, Position & Text Overflow</title>
+    <style>
+
+        .box1 {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #333;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            position: absolute;
+        }
+
+        .box2 {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: lightblue;
+            border: 1px solid #333;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box2">Java React B1</div>
+
+    <div>
+        <div class="box1">
+            Java React Feb 17th batch day 9. Introduction to Frontend technologies - HTML, CSS, Bootstrap, ReactJS and NodeJs.
+        </div>
+    </div>
+
+
+</body>
+</html>
