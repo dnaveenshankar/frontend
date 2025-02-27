@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Number Check</title>
+</head>
+<body>
+
+    <script>
+        function isPrime(number) {
+            if (number <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) return false;
+            }
+            return true;
+        }
+
+        var num = 17;
+        var result = isPrime(num);
+
+        if (result) {
+            document.write(num + " is prime");
+        } else {
+            document.write(num + " is non-prime");
+        }
+    </script>
+</body>
+</html>

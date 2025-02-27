@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arrays</title>
+</head>
+
+<body>
+    <h1>Array Demo</h1>
+
+    <script>
+        var scores = [52, 86, 87, 45, 96];
+
+        document.write("<b>Initial Array:</b><br>");
+        for (var i = 0; i < scores.length; i++) {
+            document.write(scores[i] + "<br>");
+        }
+
+        var addIndex = 2;
+        var addValue = 100;
+        scores.splice(addIndex, 0, addValue);
+
+        document.write("<br>After Adding <br>");
+        for (var i = 0; i < scores.length; i++) {
+            document.write(scores[i] + "<br>");
+        }
+
+        var removeIndex = 3;
+        scores.splice(removeIndex, 1);
+
+        document.write("<br>After Removing<br>");
+        for (var i = 0; i < scores.length; i++) {
+            document.write(scores[i] + "<br>");
+        }
+    </script>
+
+</body>
+
+</html>

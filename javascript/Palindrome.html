@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palindrome Check (No Predefined Functions)</title>
+</head>
+<body>
+
+    <script>
+        function isPalindrome(number) {
+            if (number < 0) {
+                return false;
+            }
+
+            var originalNumber = number;
+            var reversedNumber = 0;
+
+            while (number > 0) {
+                var digit = number % 10;
+                reversedNumber = reversedNumber * 10 + digit;
+                number = Math.floor(number / 10);
+            }
+
+            return originalNumber === reversedNumber;
+        }
+
+        var num = 1221;
+        var result = isPalindrome(num);
+
+        if (result) {
+            document.write(num + " is a palindrome");
+        } else {
+            document.write(num + " is not a palindrome");
+        }
+    </script>
+</body>
+</html>

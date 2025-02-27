@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Sum (Direct Value, document.write)</title>
+</head>
+<body>
+
+    <script>
+        function sumArray(arr) {
+            var sum = 0;
+            for (var num of arr) {
+                sum += num;
+            }
+            return sum;
+        }
+
+        var myArray = [11, 42, 13, 46, 85];
+        var arraySum = sumArray(myArray);
+
+        document.write("Sum: " + arraySum);
+    </script>
+</body>
+</html>

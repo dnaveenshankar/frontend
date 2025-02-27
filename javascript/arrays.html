@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arrays</title>
+</head>
+
+<body>
+    <h1>Array Demo</h1>
+
+    <script>
+        var scores = [52,86,87,45,96]
+
+        for (var i=0;i<scores.length;i++){
+            document.write(scores[i]+"<br>")
+        }
+
+        //adding elements to array
+        scores.push(45);
+        scores.push(90);
+
+        document.write("<br>After adding <br>")
+        for (var i=0;i<scores.length;i++){
+            document.write(scores[i]+"<br>")
+        }
+
+        scores.pop();
+        document.write("<br>After Deleting<br>")
+        for (var i=0;i<scores.length;i++){
+            document.write(scores[i]+"<br>")
+        }
+
+    </script>
+
+</body>
+
+</html>
