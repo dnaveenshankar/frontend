@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Demo</title>
+        <script>
+            var x = document.getElementById("para1").innerHTML;
+            var y = document.getElementsByTagName("p");
+
+            var first = y[0].innerHTML;
+            var second = y[1].innerHTML;
+        </script>
+    </head>
+    <body>
+        <h3>DOM - ID, TagName</h3>
+        
+        <p id="para1">This is Para 1</p>
+        <p id="para2">This is Para 2</p>
+
+        <script>
+            document.write("First Para: " + first + "<br>");
+            document.write("Second Para: " + second + "<br>");
+            document.write("All Para: " + x + "<br>");
+        </script>
+    </body>
+</html>

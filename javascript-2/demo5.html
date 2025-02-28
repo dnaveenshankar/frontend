@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Demo</title>
+        <script>
+            function changeColor(){
+                document.getElementById("para1").style.color = "red";
+                document.getElementById("para1").style.fontSize = "32PX";
+                document.getElementById("para2").style.color = "green";
+                document.getElementById("para2").style.fontSize = "40PX";
+            }
+        </script>
+    </head>
+    <body>
+        <h3>DOM - ID, TagName</h3>
+        
+        <p id="para1">This is Para 1</p>
+        <p id="para2">This is Para 2</p>
+
+        <button onclick="changeColor()">Change Color</button>
+    </body>
+</html>
