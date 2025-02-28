@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Basket</title>
+</head>
+<body>
+    <h2>My Basket</h2>
+    <p id="basket">[]</p>
+    <h2 id="count">No of Fruits =</h2>
+    
+    <label>Fruit Name</label>
+    <input type="text" id="fruit">
+    <button onclick="addFruit()">Add</button>
+    
+    <script>
+        var basket = [];
+
+        function addFruit() {
+            const fruitName = document.getElementById("fruit").value;
+            if (fruitName) {
+                basket.push(fruitName);
+                displayBasket();
+            }
+        }
+
+        function displayBasket() {
+            document.getElementById("basket").textContent = `[${basket}]`;
+            document.getElementById("fruit").value = '';
+            document.getElementById("count").textContent = `No of Fruits = ${basket.length}`;
+        }
+    </script>
+</body>
+</html>
