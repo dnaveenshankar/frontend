@@ -5,42 +5,42 @@
     <script>
         function validateForm(event) {
             event.preventDefault();
-            let isValid = true;
-            document.body.innerHTML += "";
 
-            let fname = document.getElementById("fname").value;
+            var isValid = true;
+
+            var fname = document.getElementById("fname").value;
             if (!/^[A-Za-z]{3,}$/.test(fname)) {
-                document.write("First name must be at least 3 characters and contain only letters.<br>");
+                document.getElementById("fnameError").innerHTML = "First name must be at least 3 letters.";
                 isValid = false;
             }
 
-            let lname = document.getElementById("lname").value;
+            var lname = document.getElementById("lname").value;
             if (!/^[A-Za-z]{1,}$/.test(lname)) {
-                document.write("Last name must contain only letters and be at least 1 character.<br>");
+                document.getElementById("lnameError").innerHTML = "Last name must contain only letters.";
                 isValid = false;
             }
 
             if (!document.querySelector('input[name="gender"]:checked')) {
-                document.write("Gender is required.<br>");
+                document.getElementById("genderError").innerHTML = "Gender is required.";
                 isValid = false;
             }
 
-            let dob = document.getElementById("dob").value;
-            let today = new Date().toISOString().split("T")[0];
+            var dob = document.getElementById("dob").value;
+            var today = new Date().toISOString().split("T")[0];
             if (!dob || dob >= today) {
-                document.write("DOB is required and cannot be a future date.<br>");
+                document.getElementById("dobError").innerHTML = "DOB is required and cannot be a future date.";
                 isValid = false;
             }
 
-            let email = document.getElementById("email").value;
+            var email = document.getElementById("email").value;
             if (!email) {
-                document.write("Email is required.<br>");
+                document.getElementById("emailError").innerHTML = "Email is required.";
                 isValid = false;
             }
 
-            let country = document.getElementById("Country").value;
+            var country = document.getElementById("Country").value;
             if (country === "#") {
-                document.write("Please select a country.<br>");
+                document.getElementById("countryError").innerHTML = "Please select a country.";
                 isValid = false;
             }
 
@@ -53,30 +53,36 @@
 <body>
     <form id="registrationForm" onsubmit="validateForm(event)">
         <h3>Registration Form</h3>
+
         <div>
             <label for="fname">First Name</label>
             <input type="text" name="fname" id="fname" required>
+            <div id="fnameError"></div>
         </div>
 
         <div>
             <label for="lname">Last Name</label>
             <input type="text" name="lname" id="lname" required>
+            <div id="lnameError"></div>
         </div>
 
         <div>
             <label>Gender</label>
             <input type="radio" name="gender" value="Male"> Male
             <input type="radio" name="gender" value="Female"> Female
+            <div id="genderError"></div>
         </div>
 
         <div>
             <label for="dob">DOB</label>
             <input type="date" name="dob" id="dob" required>
+            <div id="dobError"></div>
         </div>
 
         <div>
             <label for="email">Email</label>
             <input type="email" name="email" id="email" required>
+            <div id="emailError"></div>
         </div>
 
         <div>
@@ -88,6 +94,7 @@
                 <option value="Canada">Canada</option>
                 <option value="USA">USA</option>
             </select>
+            <div id="countryError"></div>
         </div>
 
         <div>
@@ -101,7 +108,7 @@
 
         <div>
             <label>About yourself</label>
-            <textarea name="Aboutme" rows="5" cols="50">Your Input here!</textarea>
+            <textarea name="Aboutme" rows="5" cols="50" placeholder="Your Input here!"></textarea>
         </div>
 
         <input type="submit" value="Register" />
