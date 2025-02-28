@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Demo</title>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            let isValid = true;
+            document.body.innerHTML += "";
+
+            let fname = document.getElementById("fname").value;
+            if (!/^[A-Za-z]{3,}$/.test(fname)) {
+                document.write("First name must be at least 3 characters and contain only letters.<br>");
+                isValid = false;
+            }
+
+            let lname = document.getElementById("lname").value;
+            if (!/^[A-Za-z]{1,}$/.test(lname)) {
+                document.write("Last name must contain only letters and be at least 1 character.<br>");
+                isValid = false;
+            }
+
+            if (!document.querySelector('input[name="gender"]:checked')) {
+                document.write("Gender is required.<br>");
+                isValid = false;
+            }
+
+            let dob = document.getElementById("dob").value;
+            let today = new Date().toISOString().split("T")[0];
+            if (!dob || dob >= today) {
+                document.write("DOB is required and cannot be a future date.<br>");
+                isValid = false;
+            }
+
+            let email = document.getElementById("email").value;
+            if (!email) {
+                document.write("Email is required.<br>");
+                isValid = false;
+            }
+
+            let country = document.getElementById("Country").value;
+            if (country === "#") {
+                document.write("Please select a country.<br>");
+                isValid = false;
+            }
+
+            if (isValid) {
+                document.getElementById("registrationForm").submit();
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="registrationForm" onsubmit="validateForm(event)">
+        <h3>Registration Form</h3>
+        <div>
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname" required>
+        </div>
+
+        <div>
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" id="lname" required>
+        </div>
+
+        <div>
+            <label>Gender</label>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+        </div>
+
+        <div>
+            <label for="dob">DOB</label>
+            <input type="date" name="dob" id="dob" required>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <div>
+            <label for="Country">Country</label>
+            <select name="Country" id="Country" required>
+                <option value="#">--Select--</option>
+                <option value="India">India</option>
+                <option value="China">China</option>
+                <option value="Canada">Canada</option>
+                <option value="USA">USA</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Skills</label>
+            <input type="checkbox" name="Skills" value="Java"> Java
+            <input type="checkbox" name="Skills" value="C"> C
+            <input type="checkbox" name="Skills" value="Python"> Python
+            <input type="checkbox" name="Skills" value="SQL"> SQL
+            <input type="checkbox" name="Skills" value="React"> React
+        </div>
+
+        <div>
+            <label>About yourself</label>
+            <textarea name="Aboutme" rows="5" cols="50">Your Input here!</textarea>
+        </div>
+
+        <input type="submit" value="Register" />
+        <input type="reset" value="Reset" />
+    </form>
+</body>
+</html>
