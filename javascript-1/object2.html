@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UserDefined Objects</title>
+</head>
+
+<body>
+    <h3>User Defined Objects Demo</h3>
+    <script>
+        var customer = {
+            firstName: "Rohit",
+            lastName: "Kumar",
+            email: "rohit@gmail.com"
+        };
+
+        document.write("<br> Customer Details: <br>");
+        document.write("<br> FirstName: " + customer.firstName);
+        document.write("<br> LastName: " + customer.lastName);
+        document.write("<br> Email: " + customer.email);
+
+        var customerList =[
+        {
+            firstName: "Praveen",
+            lastName: "Kumar",
+            email: "rohit@gmail.com"
+        },
+        {
+            firstName: "Raj",
+            lastName: "Kumar",
+            email: "raj@gmail.com"
+        },
+        {
+            firstName: "John",
+            lastName: "K",
+            email: "john@gmail.com"
+        }    
+        ]
+        document.write("<br> <br>Customer Details from List: <br>");
+
+        for(var c of customerList){
+            console.log(c.firstName+" "+c.lastName+" "+c.email);
+            document.write("<br> FirstName: " + c.firstName);
+            document.write("<br> LastName: " + c.lastName);
+            document.write("<br> Email: " + c.email+"<br>");
+
+        }   
+    </script>
+</body>
+
+</html>

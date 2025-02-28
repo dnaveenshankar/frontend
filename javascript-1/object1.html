@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Object Demo 1</title>
+</head>
+
+<body>
+    <h1>User Defined Object Demo</h1>
+
+    <script>
+        document.write("-----------------DATE OBJECTS-----------------------");
+
+        var today = new Date();
+        document.write("<br> Today = " + today);
+
+        document.write("<br> Today Date = " + today.getDate());
+
+        document.write("<br> Year = " + today.getFullYear());
+
+        var dob = new Date("2003-10-27");
+        document.write("<br>DOB: " + dob);
+
+        document.write("<br><br>-----------------STRING OBJECTS-----------------------");
+
+        var name = "Raj Kumar";
+        document.write("<br> Size = " + name.length);
+        document.write("<br> Upper = " + name.toUpperCase());
+        document.write("<br> Substring = " + name.substring(2, 8));
+
+        document.write("<br><br>-----------------MATH OBJECTS-----------------------");
+
+        document.write("<br> Random Number " + Math.random());
+
+        var num1 = 4.7;
+        document.write("<br> Rounded " + num1 + " = " + Math.round(num1));
+
+        var base = 2;
+        var exponent = 3;
+        document.write("<br> The power = " + Math.pow(base, exponent));
+
+        var num2 = 16;
+        document.write("<br> Square root = " + Math.sqrt(num2));
+    </script>
+
+</body>
+
+</html>
