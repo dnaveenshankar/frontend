@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>DOM Demo</title>
+        <script>
+            function addition() {
+                var x = parseInt(document.getElementById("num1").value);
+                var y = parseInt(document.getElementById("num2").value);
+                var z = x + y;
+                // alert("Sum: " + z);
+                document.getElementById("result").innerHTML = "<b>Sum: " + z + "</b>";
+            }
+        </script>
+        </head>
+        <body>
+            <h3>Calculator</h3>
+            <div>
+                <label>Enter A Value</label>
+                <input type="text" name="num1" id="num1" />
+            </div>
+            <div>
+                <label>Enter B Value</label>
+                <input type="text" name="num2" id="num2" />
+            </div>
+            <button onclick="addition()">+</button>
+            <p id="result"></p>
+        </body>
+    </head>
+</html>
