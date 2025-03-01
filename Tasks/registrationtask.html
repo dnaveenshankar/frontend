@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Registration Demo</title>
     <script>
@@ -10,59 +11,66 @@
 
             var fname = document.getElementById("fname").value;
             if (!/^[A-Za-z]{3,}$/.test(fname)) {
-                document.getElementById("fnameError").innerHTML = "First name must be at least 3 letters.";
+                document.getElementById("fnameError").innerHTML = "Wrong Input or Input Required";
+                document.getElementById("fnameError").style.color = "red";
                 isValid = false;
             }
 
             var lname = document.getElementById("lname").value;
             if (!/^[A-Za-z]{1,}$/.test(lname)) {
-                document.getElementById("lnameError").innerHTML = "Last name must contain only letters.";
+                document.getElementById("lnameError").innerHTML = "Wrong Input or Input required";
+                document.getElementById("lnameError").style.color = "red";
                 isValid = false;
             }
 
             if (!document.querySelector('input[name="gender"]:checked')) {
-                document.getElementById("genderError").innerHTML = "Gender is required.";
+                document.getElementById("genderError").innerHTML = "Input required.";
+                document.getElementById("genderError").style.color = "red";
                 isValid = false;
             }
 
-            var dob = document.getElementById("dob").value;
-            var today = new Date().toISOString().split("T")[0];
+            var dob = new Date(document.getElementById("dob").value);
+            var today = new Date();
             if (!dob || dob >= today) {
-                document.getElementById("dobError").innerHTML = "DOB is required and cannot be a future date.";
+                document.getElementById("dobError").innerHTML = "Wrong Input or Input required";
+                document.getElementById("dobError").style.color = "red";
                 isValid = false;
             }
 
             var email = document.getElementById("email").value;
             if (!email) {
-                document.getElementById("emailError").innerHTML = "Email is required.";
+                document.getElementById("emailError").innerHTML = "Input required.";
+                document.getElementById("emailError").style.color = "red";
                 isValid = false;
             }
 
             var country = document.getElementById("Country").value;
             if (country === "#") {
-                document.getElementById("countryError").innerHTML = "Please select a country.";
+                document.getElementById("countryError").innerHTML = "Input Required";
+                document.getElementById("countryError").style.color = "red";
                 isValid = false;
             }
 
             if (isValid) {
-                document.getElementById("registrationForm").submit();
+                alert("Form validated successfully!");
             }
         }
     </script>
 </head>
+
 <body>
     <form id="registrationForm" onsubmit="validateForm(event)">
         <h3>Registration Form</h3>
 
         <div>
             <label for="fname">First Name</label>
-            <input type="text" name="fname" id="fname" required>
+            <input type="text" name="fname" id="fname">
             <div id="fnameError"></div>
         </div>
 
         <div>
             <label for="lname">Last Name</label>
-            <input type="text" name="lname" id="lname" required>
+            <input type="text" name="lname" id="lname">
             <div id="lnameError"></div>
         </div>
 
@@ -75,13 +83,13 @@
 
         <div>
             <label for="dob">DOB</label>
-            <input type="date" name="dob" id="dob" required>
+            <input type="date" name="dob" id="dob">
             <div id="dobError"></div>
         </div>
 
         <div>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email">
             <div id="emailError"></div>
         </div>
 
@@ -115,4 +123,5 @@
         <input type="reset" value="Reset" />
     </form>
 </body>
+
 </html>
