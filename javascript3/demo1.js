@@ -1,6 +1,6 @@
-var x=10;
-var y=95;
+var x =10;
 
-var sum=x+y;
+let s = 'raj';
+let a =10;
 
-console.log("Sum ="+sum);
+console.log(a);
