@@ -5,7 +5,7 @@ function Header() {
   
     return (
       <div>
-        <h2>My Heading</h2>
+        <h2>React JS Programming</h2>
         <b>Welcome {firstName} {lastName}</b>
         <hr />
       </div>

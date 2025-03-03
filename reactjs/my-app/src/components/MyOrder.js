@@ -40,7 +40,11 @@ function MyOrders() {
                 {
                     customerOrders.map((order, index) => (
                         <div key={index}>
-                            <p>{index+1} : {order.itemName} {order.itemPrice} {order.itemQty}</p>
+                            <p>Index : {index}</p>
+                            <p>Item Name :{order.itemName}</p>
+                            <p>Price{order.itemPrice} </p>
+                            <p>Quantity : {order.itemQty}</p>
+                            <hr/>
                         </div>
                     ))
                 }
