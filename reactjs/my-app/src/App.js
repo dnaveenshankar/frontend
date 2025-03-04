@@ -9,18 +9,22 @@ import Parent from './components/Parent';
 import ParentClass from './components/ParentClass';
 import FetchAllMobiles from './components/FetchAllMobiles';
 import Home from './components/Home';
+import MailBox from './components/MailBox';
+import UserHome from './components/UserHome';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Content />
-      <MyOrder />
-      <Counters />
-      <ParentClass /> */}
+      {/* <Content /> */}
+      {/* <MyOrder /> */}
+      {/* <Counters /> */}
+      {/* <ParentClass /> */}
       {/* <FetchAllMobiles /> */}
+      {/* <Home />   */}
+      {/* <MailBox /> */}
 
-      <Home />  
+      <UserHome />
       <Footer />
     </div>
   );
