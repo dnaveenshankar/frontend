@@ -1,6 +1,6 @@
-# Frontend
+# Workspace 2 - Frontend
 
-Frontend is a personal workspace created to share **HTML, CSS, and Bootstrap** codes with friends. This repository includes basic to advanced implementations of frontend technologies.
+Workspace 2 - Frontend is a personal workspace created to share **HTML, CSS, NodeJS, ReactJS and Bootstrap** codes with friends. This repository includes basic to advanced implementations of frontend technologies.
 
 ## About
 - This workspace contains various frontend projects, examples, and experiments.
