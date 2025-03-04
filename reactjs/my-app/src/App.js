@@ -8,6 +8,7 @@ import Counters from './components/Counters';
 import Parent from './components/Parent';
 import ParentClass from './components/ParentClass';
 import FetchAllMobiles from './components/FetchAllMobiles';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
       <MyOrder />
       <Counters />
       <ParentClass /> */}
-      <FetchAllMobiles />
+      {/* <FetchAllMobiles /> */}
 
+      <Home />  
       <Footer />
     </div>
   );
