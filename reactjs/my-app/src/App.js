@@ -11,6 +11,7 @@ import FetchAllMobiles from './components/FetchAllMobiles';
 import Home from './components/Home';
 import MailBox from './components/MailBox';
 import UserHome from './components/UserHome';
+import FetchAllCustomers from './components/FetchAllCustomer';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       {/* <Home />   */}
       {/* <MailBox /> */}
 
+      <FetchAllCustomers />
       <UserHome />
       <Footer />
     </div>
