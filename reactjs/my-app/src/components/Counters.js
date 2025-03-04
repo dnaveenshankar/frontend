@@ -22,6 +22,15 @@ class Counters extends React.Component {
 //     });
 //   }
 
+
+  componentDidMount(){
+    console.log("Component Did Mount called");
+  }
+
+  componentDidUpdate(){
+    console.log("Component Did Update called");
+  }
+
   increment = () => {
     this.setState({
         counter : this.state.counter+1
@@ -35,6 +44,7 @@ class Counters extends React.Component {
   }
 
   render() {
+    console.log("Render called");
     return (
       <div>
         <h3>Counter : {this.state.counter}</h3>

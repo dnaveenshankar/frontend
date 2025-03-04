@@ -7,16 +7,19 @@ import MyOrder from './components/MyOrder';
 import Counters from './components/Counters';
 import Parent from './components/Parent';
 import ParentClass from './components/ParentClass';
+import FetchAllMobiles from './components/FetchAllMobiles';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      {/* <Content/> */}
-      {/* <MyOrder/> */}
-      {/* <Counters/> */}
-      <ParentClass/>
-      <Footer/>
+      <Header />
+      {/* <Content />
+      <MyOrder />
+      <Counters />
+      <ParentClass /> */}
+      <FetchAllMobiles />
+
+      <Footer />
     </div>
   );
 }
