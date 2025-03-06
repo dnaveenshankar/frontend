@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
  
 function MobileForm() {
  
@@ -8,6 +9,7 @@ function MobileForm() {
     const [mfd, setMfd] = useState('');
     const [mcompany, setMcompany] = useState('');
  
+    const Navigate = useNavigate();
     const handleSubmit = () => {
  
         const payload = {
@@ -36,7 +38,7 @@ function MobileForm() {
         <div>
             <h3>Mobile Form</h3>
             <div>
-                <label>Name</label>
+                <label class>Name</label>
                 <input type="text" name="mname" value={mname}
                     onChange={(event) => setMname(event.target.value)} />
             </div>
@@ -58,6 +60,7 @@ function MobileForm() {
  
             <input type="submit" onClick={handleSubmit} />
             <input type="button" onClick={resetForm} value="Reset" />
+            <input type="button" onClick={Navigate(-1)} value="Back" />
         </div>
     )
 }

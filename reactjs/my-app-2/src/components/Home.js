@@ -1,20 +1,28 @@
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
-    <div>
-      <h1>Home Page</h1>
-      <h2>Mobile Controllers</h2>
-      <p><Link to="/mobile/all">Fetch All Mobiles</Link></p>
-      <p><Link to="/mobile/add">Add Mobiles</Link></p>
-      <p><Link to="/mobileForm">Mobile Form</Link></p>
-      <p><Link to="/mobile/details">Mobile Deatils</Link></p><hr/>
-      <h2>Customer Controllers</h2>
-      <p><Link to="/customer/add">Add Customer</Link></p>
-      <p><Link to="/customer/all">View all Customers</Link></p>
+    <div className="container mt-4">
+      <h1 className="text-center text-dark">Home Page</h1>
 
+      <div className="mt-4">
+        <h2 className="text-center">Mobile Controllers</h2>
+        <div className="d-flex flex-column align-items-center">
+          <Link to="/mobile/all" className="btn btn-primary m-2">Fetch All Mobiles</Link>
+          <Link to="/mobile/add" className="btn btn-success m-2">Add Mobiles</Link>
+          <Link to="/mobile/details" className="btn btn-info m-2">Mobile Details</Link>
+        </div>
+      </div>
 
+      <hr className="my-4" />
 
+      <div>
+        <h2 className="text-center">Customer Controllers</h2>
+        <div className="d-flex flex-column align-items-center">
+          <Link to="/customer/add" className="btn btn-warning m-2">Add Customer</Link>
+          <Link to="/customer/all" className="btn btn-danger m-2">View all Customers</Link>
+        </div>
+      </div>
     </div>
   );
 }

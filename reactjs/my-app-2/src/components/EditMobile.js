@@ -3,10 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function EditMobile() {
-    
-
     const { id } = useParams();
-
     const navigate = useNavigate();
 
     const [mobileId, setMobileId] = useState('');
@@ -16,7 +13,7 @@ function EditMobile() {
     const [mcompany, setMcompany] = useState('');
 
     useEffect(() => {
-        axios.get('http://localhost:8081/mobiles/' + id)
+        axios.get(`http://localhost:8081/mobiles/${id}`)
             .then(resp => {
                 setMobileId(resp.data.mobileId);
                 setMname(resp.data.mobileName);
@@ -33,47 +30,42 @@ function EditMobile() {
             price: mprice,
             mfd: mfd,
             companyName: mcompany
-        }
+        };
 
-        axios.put("http://localhost:8081/mobiles/", payload).then(resp => {
-            alert("Mobile updated with id: " + resp.data.mobileId);
-            // navigate('/mobile/all');
-            navigate(-1);
-        }
-        );
+        axios.put("http://localhost:8081/mobiles/", payload)
+            .then(resp => {
+                alert("Mobile updated with id: " + resp.data.mobileId);
+                navigate(-1);
+            });
     };
 
-
     return (
-        <div>
-            <h3>Mobile Form</h3>
-            <div>
-                <label>Id</label>
-                <input type="text" name="mid" value={mobileId}
-                onChange={(event) => setMobileId(event.target.value)} disabled/>
+        <div className="container mt-4">
+            <h3 className="text-primary">Edit Mobile</h3>
+            <div className="form-group">
+                <label className="form-label">Mobile ID</label>
+                <input type="text" className="form-control" value={mobileId} disabled />
             </div>
-            <div>
-                <label>Name</label>
-                <input type="text" name="mname" value={mname}
-                    onChange={(event) => setMname(event.target.value)} />
+            <div className="form-group">
+                <label className="form-label">Mobile Name</label>
+                <input type="text" className="form-control" value={mname} onChange={(e) => setMname(e.target.value)} />
             </div>
-            <div>
-                <label>Price</label>
-                <input type="text" name="mprice" value={mprice}
-                    onChange={(event) => setMprice(event.target.value)} />
+            <div className="form-group">
+                <label className="form-label">Price</label>
+                <input type="text" className="form-control" value={mprice} onChange={(e) => setMprice(e.target.value)} />
             </div>
-            <div>
-                <label>MFD</label>
-                <input type="date" name="mfd" value={mfd}
-                    onChange={(event) => setMfd(event.target.value)} />
+            <div className="form-group">
+                <label className="form-label">Manufacture Date (MFD)</label>
+                <input type="date" className="form-control" value={mfd} onChange={(e) => setMfd(e.target.value)} />
             </div>
-            <div>
-                <label>Company Name</label>
-                <input type="text" name="mcompany" value={mcompany}
-                    onChange={(event) => setMcompany(event.target.value)} />
+            <div className="form-group">
+                <label className="form-label">Company Name</label>
+                <input type="text" className="form-control" value={mcompany} onChange={(e) => setMcompany(e.target.value)} />
             </div>
-
-            <input type="submit" onClick={handleSubmit} />
+            <div className="form-group">
+                <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Update</button>
+                <button type="button" className="btn btn-danger" onClick={() => navigate(-1)}>Back</button>
+            </div>
         </div>
     );
 }

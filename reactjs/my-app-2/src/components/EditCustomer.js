@@ -43,35 +43,35 @@ function EditCustomer() {
     };
 
     return (
-        <div>
-            <h3>Edit Customer</h3>
-            <div>
-                <label>Customer ID</label>
-                <input type="text" value={customerId} disabled />
+        <div className="container mt-4">
+            <h3 className="text-primary">Edit Customer</h3>
+            <div className="form-group">
+                <label className="form-label">Customer ID</label>
+                <input type="text" className="form-control" value={customerId} disabled />
             </div>
-            <div>
-                <label>First Name</label>
-                <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+            <div className="form-group">
+                <label className="form-label">First Name</label>
+                <input type="text" className="form-control" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
             </div>
-            <div>
-                <label>Last Name</label>
-                <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+            <div className="form-group">
+                <label className="form-label">Last Name</label>
+                <input type="text" className="form-control" value={lastName} onChange={(e) => setLastName(e.target.value)} />
             </div>
-            <div>
-                <label>Email</label>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <div className="form-group">
+                <label className="form-label">Email</label>
+                <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
             </div>
-            <div>
-                <label>Mobile</label>
-                <input type="text" value={mobile} onChange={(e) => setMobile(e.target.value)} />
+            <div className="form-group">
+                <label className="form-label">Mobile</label>
+                <input type="text" className="form-control" value={mobile} onChange={(e) => setMobile(e.target.value)} />
             </div>
-            <div>
-                <label>City</label>
-                <input type="text" value={city} onChange={(e) => setCity(e.target.value)} />
+            <div className="form-group">
+                <label className="form-label">City</label>
+                <input type="text" className="form-control" value={city} onChange={(e) => setCity(e.target.value)} />
             </div>
-            <div>
-                <input type="submit" onClick={handleSubmit} value="Update" />
-                <input type="button" onClick={() => navigate(-1)} value="Back" />
+            <div className="form-group">
+                <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Update</button>
+                <button type="button" className="btn btn-danger" onClick={() => navigate(-1)}>Back</button>
             </div>
         </div>
     );
