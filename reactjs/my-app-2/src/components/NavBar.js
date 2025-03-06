@@ -25,6 +25,12 @@ function Navbar() {
           <li className="nav-item">
             <Link to="/GetAllMobiles/" className="nav-link">Mobile Cards</Link>
           </li>
+          <li className="nav-item">
+            <Link to="/Login2/" className="nav-link">Login 2</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/Register2/" className="nav-link">Register 2</Link>
+          </li>
         </ul>
       </nav>
     </div>

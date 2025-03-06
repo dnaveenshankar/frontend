@@ -17,6 +17,8 @@ import EditCustomer from './components/EditCustomer';
 import DeleteCustomer from './components/DeleteCustomer';
 import Navbar from './components/NavBar';
 import GetAllMobiles from './components/GetAllMobiles';
+import LoginForm2 from './components/LoginForm2';
+import RegistrationForm2 from './components/RegistrationForm2';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <Routes>
           <Route path='/counter/' element={<Counter />} />
           <Route path='/GetAllMobiles' element={<GetAllMobiles/>}/>
+          <Route path='/login2' element={<LoginForm2/>}/>
+          <Route path='/register2' element={<RegistrationForm2/>}/>
 
           {/* Mobile Controllers */}
           <Route path='/mobile/all' element={<FetchAllMobiles />} />
