@@ -11,6 +11,11 @@ import FetchMobileDetails from './components/FetchMobileDetails';
 import EditMobile from './components/EditMobile';
 import DeleteMobile from './components/DeleteMobile';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import AddCustomer from './components/AddCustomer';
+import GetAllCustomers from './components/GetAllCustomers';
+import GetCustomerById from './components/GetCustomerById';
+import EditCustomer from './components/EditCustomer';
+import DeleteCustomer from './components/DeleteCustomer';
 
 function App() {
   return (
@@ -22,6 +27,16 @@ function App() {
           <Route path='/mobile/details/:id' element={<FetchMobileDetails/>}/>
           <Route path='/mobile/update/:id' element={<EditMobile/>}/>
           <Route path='/mobile/delete/:id' element={<DeleteMobile/>}/>
+
+          {/* Customer Controllers */}
+          <Route path='/customer/add' element={<AddCustomer/>}/>
+          <Route path='/customer/all' element={<GetAllCustomers/>}/>
+          <Route path='/customer/view/:id' element={<GetCustomerById/>}/>
+          <Route path='/customer/edit/:id' element={<EditCustomer/>}/>
+          <Route path='/customer/delete/:id' element={<DeleteCustomer/>}/>
+
+
+
           <Route path='/' element={<Home/>}/>
 
           
