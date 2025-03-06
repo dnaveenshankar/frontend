@@ -22,6 +22,9 @@ function Navbar() {
           <li className="nav-item">
             <Link to="/customer/all/" className="nav-link">Customer</Link>
           </li>
+          <li className="nav-item">
+            <Link to="/GetAllMobiles/" className="nav-link">Mobile Cards</Link>
+          </li>
         </ul>
       </nav>
     </div>

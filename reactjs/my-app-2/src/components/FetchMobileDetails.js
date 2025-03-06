@@ -1,12 +1,18 @@
 import axios from "axios";
 import { use, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function FetchMobileDetails() {
   
     const[mobile,setMobile] = useState([null]); 
 
+    const navigate = useNavigate();
     const {id} = useParams();
+
+    const handleBack = () => {
+      navigate(-1); // Navigate back one entry in the history stack
+    };
 
     useEffect(() => {
         axios.get('http://localhost:8081/mobiles/'+id).then(resp => {setMobile(resp.data)});
@@ -25,6 +31,7 @@ function FetchMobileDetails() {
             <h2>Company : {mobile.companyName}</h2>
         </div>
       }
+      <button onClick={handleBack}>Back</button>
     </div>
   );
 }

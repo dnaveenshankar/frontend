@@ -16,6 +16,7 @@ import GetCustomerById from './components/GetCustomerById';
 import EditCustomer from './components/EditCustomer';
 import DeleteCustomer from './components/DeleteCustomer';
 import Navbar from './components/NavBar';
+import GetAllMobiles from './components/GetAllMobiles';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <div className="container mt-4">
         <Routes>
           <Route path='/counter/' element={<Counter />} />
+          <Route path='/GetAllMobiles' element={<GetAllMobiles/>}/>
 
           {/* Mobile Controllers */}
           <Route path='/mobile/all' element={<FetchAllMobiles />} />
