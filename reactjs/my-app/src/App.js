@@ -7,15 +7,26 @@ import MyOrder from './components/MyOrder';
 import Counters from './components/Counters';
 import Parent from './components/Parent';
 import ParentClass from './components/ParentClass';
-import FetchAllMobiles from './components/FetchAllMobiles';
 import Home from './components/Home';
 import MailBox from './components/MailBox';
 import UserHome from './components/UserHome';
 import FetchAllCustomers from './components/FetchAllCustomer';
+import ComponentA from './components/ComponentA';
+import { createContext } from 'react';
+
+
+
+export const myContext = createContext();
 
 function App() {
+
+  const loggedInUser =  {name:'Naveen', role : 'admin' }
+
+
   return (
     <div className="App">
+
+      <myContext.Provider value={loggedInUser}>
       <Header />
       {/* <Content /> */}
       {/* <MyOrder /> */}
@@ -24,10 +35,12 @@ function App() {
       {/* <FetchAllMobiles /> */}
       {/* <Home />   */}
       {/* <MailBox /> */}
+      {/* <ComponentA user = {loggedInUser}/> */}
 
-      <FetchAllCustomers />
+      <ComponentA/>
       <UserHome />
       <Footer />
+      </myContext.Provider>
     </div>
   );
 }

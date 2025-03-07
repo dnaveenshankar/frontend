@@ -1,0 +1,10 @@
+{
+    "myproducts" : [
+        {
+            "id" : 1,
+            "name" : "Samsung A11",
+            "price" : 25000,
+            "mfd" : "2025-03-07"
+        }
+    ]
+}
