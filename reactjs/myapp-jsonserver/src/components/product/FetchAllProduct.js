@@ -11,14 +11,14 @@ function FetchAllProduct() {
 
     return (
         <div>
-            <Link to ="/add">Add New Product</Link>
+            <Link to ="/product/add">Add New Product</Link>
             <h3>All products</h3>
             <div>
                 {
                     products.map(product => (
                         <div key={product.id}>
-                            <p>{product.id} {product.name} {product.price} {product.mfd}</p>
-                            <Link    to={`/fetch/${product.id}`}>View</Link>
+                            <p>{product.id} {product.name} {product.price} {product.mfd}
+                            <Link    to={`/product/view/${product.id}`}>View</Link></p>
                         </div>
                     ))
                 }
