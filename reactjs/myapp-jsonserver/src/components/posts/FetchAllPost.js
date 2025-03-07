@@ -17,8 +17,8 @@ function FetchAllPosts() {
                 {
                     posts.map(post => (
                         <div key={post.id}>
-                            <p>{post.id} {post.title} {post.views}</p>
-                            <Link to={`/post/view/${post.id}`}>View</Link>
+                            <p>{post.id} {post.title}
+                            <Link to={`/post/view/${post.id}`}> View</Link></p>
                         </div>
                     ))
                 }

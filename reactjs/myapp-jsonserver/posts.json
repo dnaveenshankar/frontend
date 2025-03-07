@@ -51,6 +51,11 @@
       "id": "5",
       "text": "another comment about post 4",
       "postId": "4"
+    },
+    {
+      "id": "6",
+      "postId": "1",
+      "text": "New comment to post 1"
     }
   ],
   "profile": {

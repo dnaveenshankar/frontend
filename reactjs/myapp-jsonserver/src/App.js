@@ -6,6 +6,10 @@ import AddProduct from './components/product/AddProduct';
 import FetchAllPosts from './components/posts/FetchAllPost'
 import FetchPost from './components/posts/FetchPost';
 import AddPost from './components/posts/AddPost';
+import AddComment from './components/comments/AddComment';
+import FetchAllComments from './components/comments/FetchAllComments';
+import FetchComment from './components/comments/FetchComment';
+
 
 function App() {
   return (
@@ -20,6 +24,10 @@ function App() {
           <Route path='post/all' element={<FetchAllPosts/>}/>
           <Route path='post/view/:id' element={<FetchPost/>}/>
           <Route path='post/add' element={<AddPost/>}/>
+          {/* Comment Service */}
+          <Route path='comment/all' element={<FetchAllComments/>}/>
+          <Route path='comment/view/:id' element={<FetchComment/>}/>
+          <Route path='comment/add' element={<AddComment/>}/>
         </Routes>      
       </BrowserRouter>
     </div>
