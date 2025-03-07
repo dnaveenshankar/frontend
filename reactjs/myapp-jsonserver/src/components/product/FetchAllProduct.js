@@ -17,8 +17,10 @@ function FetchAllProduct() {
                 {
                     products.map(product => (
                         <div key={product.id}>
-                            <p>{product.id} {product.name} {product.price} {product.mfd}
-                            <Link    to={`/product/view/${product.id}`}>View</Link></p>
+                            <p>{product.id} {product.name} {product.price}&nbsp; &nbsp;
+                            <Link to={`/product/view/${product.id}`}>View</Link>&nbsp; &nbsp;
+                            <Link to={`/product/edit/${product.id}`}>Edit</Link>&nbsp; &nbsp;
+                            <Link to={`/product/delete/${product.id}`}>Delete</Link></p>
                         </div>
                     ))
                 }
