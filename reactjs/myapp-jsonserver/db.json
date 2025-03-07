@@ -1,10 +1,52 @@
 {
-    "myproducts" : [
-        {
-            "id" : 1,
-            "name" : "Samsung A11",
-            "price" : 25000,
-            "mfd" : "2025-03-07"
-        }
-    ]
+  "myproducts": [
+    {
+      "id": "1",
+      "name": "Samsung A11",
+      "price": 25000,
+      "mfd": "2025-03-07"
+    },
+    {
+      "id": "2",
+      "name": "iPhone 13",
+      "price": 65000,
+      "mfd": "2025-02-15"
+    },
+    {
+      "id": "3",
+      "name": "OnePlus Nord 2",
+      "price": 32000,
+      "mfd": "2025-01-25"
+    },
+    {
+      "id": "4",
+      "name": "Redmi Note 12",
+      "price": 20000,
+      "mfd": "2025-03-01"
+    },
+    {
+      "id": "5",
+      "name": "Realme 10 Pro",
+      "price": 23000,
+      "mfd": "2025-02-20"
+    },
+    {
+      "id": "6",
+      "name": "Google Pixel 7",
+      "price": 55000,
+      "mfd": "2025-01-30"
+    },
+    {
+      "id": "7",
+      "name": "Nothing",
+      "price": "12000",
+      "mfd": "2025-02-25"
+    },
+    {
+      "id": "8",
+      "name": "Moto G2",
+      "price": "18000",
+      "mfd": "2021-05-12"
+    }
+  ]
 }
