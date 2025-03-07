@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = "http://localhost:6000";
+const baseUrl = "http://localhost:5001";
 export function fetchAllPosts() {
     return axios.get(baseUrl + "/posts");
 }

@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import FetchAllProduct from './components/product/FetchAllProduct';
 import FetchProduct from './components/product/FetchProduct';
 import AddProduct from './components/product/AddProduct';
-import FetchAllPosts from './components/posts/FetchAllPost';
+import FetchAllPosts from './components/posts/FetchAllPost'
 import FetchPost from './components/posts/FetchPost';
 import AddPost from './components/posts/AddPost';
 

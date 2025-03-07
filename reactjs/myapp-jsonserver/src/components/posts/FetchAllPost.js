@@ -11,7 +11,7 @@ function FetchAllPosts() {
 
     return (
         <div>
-            <Link to="./post/add">Add New Post</Link>
+            <Link to="/post/add">Add New Post</Link>
             <h3>All Posts</h3>
             <div>
                 {

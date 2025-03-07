@@ -19,6 +19,11 @@
       "id": "4",
       "title": "Post 4",
       "views": 270
+    },
+    {
+      "id": "5",
+      "title": "New Post",
+      "views": 15
     }
   ],
   "comments": [
