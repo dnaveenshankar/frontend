@@ -1,10 +1,11 @@
 import { Field, Form, Formik } from 'formik';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { addPost, fetchPostById, updatePost } from '../service/PostService';
+import { useParams, useNavigate } from 'react-router-dom';
+import { addPost, fetchPostById, updatePost, deletePost } from '../service/PostService';
 
 function AddOrEditPost() {
     const { id } = useParams();
+    const navigate = useNavigate();
     const [initialValues, setInitialValues] = useState({
         id: '',
         title: '',
@@ -16,6 +17,15 @@ function AddOrEditPost() {
             fetchPostById(id).then(resp => setInitialValues(resp.data));
         }
     }, [id]);
+
+    const handleDelete = () => {
+        if (window.confirm("Are you sure you want to delete this post?")) {
+            deletePost(id).then(() => {
+                alert("Post Deleted Successfully!");
+                navigate(-1);
+            });
+        }
+    };
 
     return (
         <div className="container mt-4">
@@ -49,7 +59,10 @@ function AddOrEditPost() {
                             <label className="form-label">Views</label>
                             <Field name="views" type="text" className="form-control" />
                         </div>
-                        <input type="submit" className="btn btn-primary mt-3" value={id ? "Update Post" : "Add Post"} />
+                        <div className="mt-3">
+                            <input type="submit" className="btn btn-primary me-2" value={id ? "Update Post" : "Add Post"} />
+                            {id && <button type="button" className="btn btn-danger" onClick={handleDelete}>Delete Post</button>}
+                        </div>
                     </Form>
                 )}
             </Formik>

@@ -2,7 +2,7 @@
   "posts": [
     {
       "id": "1",
-      "title": "a title",
+      "title": "a new title 1",
       "views": 100
     },
     {
@@ -19,11 +19,6 @@
       "id": "4",
       "title": "Post 4",
       "views": 270
-    },
-    {
-      "id": "5",
-      "title": "New Post",
-      "views": 15
     }
   ],
   "comments": [

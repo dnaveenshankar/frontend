@@ -1,7 +1,7 @@
 import { Field, Form, Formik } from 'formik';
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { FetchByIdProduct, AddProducts, updateProduct } from '../service/ProductService';
+import { FetchByIdProduct, AddProducts, updateProduct, deleteProduct } from '../service/ProductService';
 
 function AddOrEditProduct() {
     const { id } = useParams();
@@ -19,6 +19,15 @@ function AddOrEditProduct() {
             FetchByIdProduct(id).then(resp => setInitialValues(resp.data));
         }
     }, [id]);
+
+    const handleDelete = () => {
+        if (window.confirm("Are you sure you want to delete this product?")) {
+            deleteProduct(id).then(() => {
+                alert("Product Deleted Successfully!");
+                navigate(-1);
+            });
+        }
+    };
 
     return (
         <div className="container mt-4">
@@ -58,7 +67,10 @@ function AddOrEditProduct() {
                             <label className="form-label">MFD</label>
                             <Field name="mfd" type="date" className="form-control" />
                         </div>
-                        <input type="submit" className="btn btn-primary mt-3" value={id ? "Update Product" : "Add Product"} />
+                        <div className="mt-3">
+                            <input type="submit" className="btn btn-primary me-2" value={id ? "Update Product" : "Add Product"} />
+                            {id && <button type="button" className="btn btn-danger" onClick={handleDelete}>Delete Product</button>}
+                        </div>
                     </Form>
                 )}
             </Formik>
