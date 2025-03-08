@@ -14,8 +14,8 @@
     },
     {
       "id": "3",
-      "name": "OnePlus Nord 2",
-      "price": 32000,
+      "name": "OnePlus Nord 3",
+      "price": "75000",
       "mfd": "2025-01-25"
     },
     {
@@ -41,12 +41,6 @@
       "name": "Nothing",
       "price": "12000",
       "mfd": "2025-02-25"
-    },
-    {
-      "id": "8",
-      "name": "Moto G2",
-      "price": "18000",
-      "mfd": "2021-05-12"
     }
   ]
 }

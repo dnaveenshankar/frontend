@@ -16,6 +16,7 @@ import DeletePost from './components/posts/DeletePost';
 import Home from './components/Home';
 import AddOrEditProduct from './components/product/AddorEditProduct';
 import DeleteProduct from './components/product/DeleteProduct';
+import RegistrationForm from './components/Forms/RegistrationForm';
 
 function App() {
   return (
@@ -24,13 +25,14 @@ function App() {
         <Routes>
           {/* Home */}
           <Route path='/' element={<Home />} />
+          {/* Forms */}
+          <Route path='/register' element={<RegistrationForm />} />
           {/* Product Service */}
           <Route path='product/all' element={<FetchAllProduct />} />
           <Route path='product/view/:id' element={<FetchProduct />} />
           <Route path='product/add' element={<AddProduct />} />
           <Route path='product/edit/:id?' element={<AddOrEditProduct />} />
           <Route path='product/delete/:id' element={<DeleteProduct />} />
-
           {/* Post Service */}
           <Route path='post/all' element={<FetchAllPosts />} />
           <Route path='post/view/:id' element={<FetchPost />} />

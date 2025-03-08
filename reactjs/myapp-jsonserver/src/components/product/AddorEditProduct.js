@@ -25,7 +25,7 @@ function AddOrEditProduct() {
             deleteProduct(id).then(() => {
                 alert("Product Deleted Successfully!");
                 navigate(-1);
-            });
+            })
         }
     };
 

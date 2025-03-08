@@ -20,7 +20,7 @@
     {
       "id": "1",
       "text": "a comment about post 1",
-      "postId": null
+      "postId": "1"
     },
     {
       "id": "2",
@@ -39,8 +39,8 @@
     },
     {
       "id": "5",
-      "postId": "2",
-      "text": "New comment for post 2"
+      "postId": "1",
+      "text": "Good Post"
     }
   ],
   "profile": {
