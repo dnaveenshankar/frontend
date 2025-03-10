@@ -1,7 +1,7 @@
 import axios from "axios";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 function FetchMobileDetails() {
   
@@ -16,7 +16,7 @@ function FetchMobileDetails() {
 
     useEffect(() => {
         axios.get('http://localhost:8081/mobiles/'+id).then(resp => {setMobile(resp.data)});
-    },[]);
+    },[id]);
 
   return (
     <div>

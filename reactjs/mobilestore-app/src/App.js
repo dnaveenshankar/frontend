@@ -1,9 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import AddCustomer from './components/AddCustomer';
 import DeleteCustomer from './components/DeleteCustomer';
-import AddMobile from './components/AddMobiles';
 import DeleteMobile from './components/DeleteMobile';
 import EditCustomer from './components/EditCustomer';
 import EditMobile from './components/EditMobile';
@@ -15,6 +13,7 @@ import NavBar from './components/NavBar';
 import AddItemToCart from './components/AddItemToCart';
 import PlaceOrder from './components/PlaceOrder';
 import ViewOrder from './components/ViewOrder';
+import MobileForm from './components/AddMobiles';
 
 
 function App() {
@@ -26,7 +25,8 @@ function App() {
         <Routes>
 
           {/* Mobile Controllers */}
-          <Route path='/mobile/add' element={<AddMobile/>}/>
+          <Route path = '/mobile/add' element={<MobileForm/>}/>
+          {/* <Route path='/mobile/add' element={<AddMobile/>}/> */}
           <Route path='/mobile/all' element={<GetAllMobiles/>}/>
           <Route path='/mobile/details/:id' element={<FetchMobileDetails />} />
           <Route path='/mobile/edits/:id' element={<EditMobile />} />
