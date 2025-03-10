@@ -17,14 +17,18 @@ import Home from './components/Home';
 import AddOrEditProduct from './components/product/AddorEditProduct';
 import DeleteProduct from './components/product/DeleteProduct';
 import RegistrationForm from './components/Forms/RegistrationForm';
+import DataFromLink from './components/DataFromLink';
+import DataComponentWithLoading from './components/DataComponentWithLoading';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <DataComponentWithLoading/>
         <Routes>
           {/* Home */}
           <Route path='/' element={<Home />} />
+          <Route path='/data' element={<DataFromLink />} />
           {/* Forms */}
           <Route path='/register' element={<RegistrationForm />} />
           {/* Product Service */}
