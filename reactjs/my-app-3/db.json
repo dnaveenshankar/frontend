@@ -2,28 +2,29 @@
   "projects": [
     {
       "id": "1",
-      "projectName": "Free Education",
-      "projectDesc": "some description",
+      "projectName": "Feeding Stray Dogs in Tirupur",
+      "projectDesc": "Proving food for stray dogs",
       "goalAmount": 500000,
-      "amountRaised": 0
+      "amountRaised": 8000
     },
     {
       "id": "2",
-      "projectName": "Home to Homeless",
-      "projectDesc": "Home to homeless persons",
+      "projectName": "Educating People",
+      "projectDesc": "Providing Notebooks",
       "goalAmount": 100000,
-      "amountRaised": 100
+      "amountRaised": 2000
+    },
+    {
+      "id": 3,
+      "projectName": "Feeding India",
+      "projectDesc": "Food for needy",
+      "goalAmount": 50000,
+      "amountRaised": 10
     }
   ],
   "investments": [
     {
       "id": "1",
-      "investorName": "rohan",
-      "amountPaid": 50000,
-      "projectId": 1
-    },
-    {
-      "id": "2",
       "investorName": "Kaif",
       "amountPaid": 20000,
       "projectId": 1
